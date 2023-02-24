@@ -8,7 +8,7 @@
         <li><a href="#" class="nav-link px-2 link-dark">CHARACTERS</a></li>
         <li><a href="#" class="nav-link px-2 link-dark">MOVIES</a></li>
         <li><a href="#" class="nav-link px-2 link-dark">TV</a></li>
-        <li><a href="{{ route('comics') }}" class="nav-link px-2 link-dark">COMICS</a></li>
+        <li><a href="{{ route('home.index') }}" class="nav-link px-2 link-dark">COMICS</a></li>
         <li><a href="#" class="nav-link px-2 link-dark">GAMES</a></li>
         <li><a href="#" class="nav-link px-2 link-dark">COLLECTIBLES</a></li>
         <li><a href="#" class="nav-link px-2 link-dark">VIDEOS</a></li>

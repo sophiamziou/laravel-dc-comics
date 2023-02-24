@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComicController as ComicController;
+use App\Http\Controllers\PagesController;
 use App\Models\Comic;
 
 /*
@@ -24,7 +25,11 @@ Route::get('/', function () {
 //     return view('comics', compact('books'));
 // })->name('comics');
 
-Route::get('/', [ComicController::class, 'getComics'])->name('comics');
+Route::get('/', [PagesController::class, 'getHomepage'])->name('homepage');
+
+// Route::get('/home', [ComicController::class, 'index'])->name('comics');
+
+Route::resource('home', ComicController::class);
 
 Route::get('/comics/{param}', function ($param) {
     $books = Comic::all();
