@@ -18,16 +18,16 @@
         <div class="container">
             <div class="row">
                 @foreach ($books as $key => $book)
-                <a href="{{ route('single-comic', ['param'=> $key]) }}">
-                    <div class="col">
+                <div class="col">
+                        <a href="{{ route('single-comic', ['param'=> $key]) }}">
                         <div class="card" style="width: 18rem;">
                             <img src="{{$book['thumb']}}" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">{{$book['title']}}</h5>
                             </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+                </div>
                 @endforeach
             </div>
         </div>

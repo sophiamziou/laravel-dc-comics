@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComicController as ComicController;
+use App\Models\Comic;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +27,7 @@ Route::get('/', function () {
 Route::get('/', [ComicController::class, 'getComics'])->name('comics');
 
 Route::get('/comics/{param}', function ($param) {
-    $books = config('db.books');
+    $books = Comic::all();
     $single_book = $books[$param];
     return view('single_comic', compact('single_book'));
 })->name('single-comic');
