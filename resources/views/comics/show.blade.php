@@ -6,4 +6,7 @@
       <h5 class="card-title">{{$comic['title']}}</h5>
      </div>
 </div>
+<a href="{{ route('comics.edit', $comic )}}">
+  <button type="button" class="btn btn-primary">EDIT</button>
+</a>
 @endsection

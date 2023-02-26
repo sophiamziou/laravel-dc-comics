@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('content')
 <div class="container-fluid">
-
     <form action="{{route('comics.store')}}" method="POST">
         @csrf
         <div class="mb-3">
@@ -32,7 +31,7 @@
             <label for="" class="form-label">Aggiungi link immagine</label>
             <input type="text" class="form-control" id="" aria-describedby="" name="thumb">
         </div>
-    
+
         <div class="form-group">
             <button type="submit" class="btn btn-primary">Crea il nuovo Comics</button>
         </div>
