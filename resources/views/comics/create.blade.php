@@ -3,6 +3,17 @@
 <div class="container-fluid">
     <form action="{{route('comics.store')}}" method="POST">
         @csrf
+        <div>
+            @if ($errors)
+                <div class="d-flex">
+                    @foreach ($errors->all() as $message)
+                        <div class="alert alert-danger m-4" role="alert">
+                            {{$message}}
+                        </div>
+                    @endforeach
+                </div>
+            @endif
+        </div>
         <div class="mb-3">
           <label for="" class="form-label">Aggiungi title</label>
           <input type="text" class="form-control" id="" aria-describedby="" name="title">
