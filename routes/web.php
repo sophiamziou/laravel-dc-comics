@@ -29,10 +29,10 @@ Route::get('/', [PagesController::class, 'getHomepage'])->name('homepage');
 
 // Route::get('/home', [ComicController::class, 'index'])->name('comics');
 
-Route::resource('home', ComicController::class);
+Route::resource('comics', ComicController::class);
 
-Route::get('/comics/{param}', function ($param) {
-    $books = Comic::all();
-    $single_book = $books[$param];
-    return view('single_comic', compact('single_book'));
-})->name('single-comic');
+// Route::get('/comics/{param}', function ($param) {
+//     $books = Comic::all();
+//     $single_book = $books[$param];
+//     return view('single_comic', compact('single_book'));
+// })->name('single-comic');

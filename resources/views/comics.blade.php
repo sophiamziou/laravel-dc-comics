@@ -19,7 +19,7 @@
             <div class="row">
                 @foreach ($books as $key => $book)
                 <div class="col">
-                        <a href="{{ route('single-comic', ['param'=> $key]) }}">
+                        <a href="{{ route('comics.show',['comic' => $book['id']]) }}">
                         <div class="card" style="width: 18rem;">
                             <img src="{{$book['thumb']}}" class="card-img-top" alt="...">
                             <div class="card-body">
