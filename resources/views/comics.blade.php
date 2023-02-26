@@ -16,6 +16,13 @@
     @include('partials.header')
     <main>
         <div class="container">
+            <div class="row my-4">
+                <div class="col">
+                    <a href="{{ route('comics.create')}}">
+                        <button type="button" class="btn btn-primary">NEW</button>
+                    </a>
+                </div>
+            </div>
             <div class="row">
                 @foreach ($books as $key => $book)
                 <div class="col">
