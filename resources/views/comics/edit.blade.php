@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="container-fluid">
-    <form action="{{ route('comics.update', ['comic' => $comic['id']])}}" method="POST">
+    <form action="{{ route('comics.update', ['comic' => $comic])}}" method="POST">
         @csrf
         @method('PUT')
         <div class="mb-3">
@@ -33,7 +33,7 @@
             <input value="{{ old('thumb') ?? $comic['thumb'] }}" type="text" class="form-control" id="" aria-describedby="" name="thumb">
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary">Crea il nuovo Comics</button>
+            <button type="submit" class="btn btn-primary">Salva modifiche</button>
         </div>
       </form>
 </div>
